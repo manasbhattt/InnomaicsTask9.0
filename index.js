@@ -5,12 +5,6 @@ const bodyParser  =require('body-parser');
 
 app.use(bodyParser.json());
 
-// app.get('/', (req, res) => {
-//     res.send("hello world");
-// });
-// app.get('/todos', (req, res) =>{
-//     res.send("Todos")
-// })
 const connectDB = require('./config/db');
 dotenv.config({path: './config/config.env'})
 connectDB();
