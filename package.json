@@ -1,26 +1,26 @@
 {
   "name": "todo-list-api",
   "version": "1.0.0",
-  "description": "to do app",
+  "description": "To-do app",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
-  "author": "Mennatallah Ashraf",
+  "author": "Manas Mrinal Bhatt",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",
-    "dot": "^1.1.3",
     "dotenv": "^16.0.3",
-    "env": "^0.0.2",
     "express": "^4.18.2",
     "mongoose": "^7.0.2",
-    "nodemon": "^2.0.21",
-    "router": "^1.3.8"
+    "router": "^2.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  },
   "repository": {
     "type": "git",
-    "url": "todo-list-api"
+    "url": "https://github.com/manasbhattt/todo-list-api.git"
   }
 }
