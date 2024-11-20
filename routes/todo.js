@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { Todo } = require('../models/todo');
 
-//Get all tasks
+
 router.get('/api/todos', async (req, res) => {
     try {
       const data = await Todo.find({});
@@ -12,7 +12,7 @@ router.get('/api/todos', async (req, res) => {
     }
   });
 
-//Save tasks
+
 router.post('/api/todo/add',  async(req, res) => {
   try{
     const task = await Todo.create(req.body)
@@ -22,7 +22,7 @@ router.post('/api/todo/add',  async(req, res) => {
     res.status(500).json({message: error.message})
   }
 })
-//Get a task by id
+
 router.get('/api/todo/:id', async(req, res) =>{
   try {
       const {id} = req.params;
@@ -33,7 +33,7 @@ router.get('/api/todo/:id', async(req, res) =>{
   }
 })
 
-//Update a task
+
 router.put('/api/todo/:id', async(req, res) => {
   try {
       const {id} = req.params;
@@ -49,7 +49,7 @@ router.put('/api/todo/:id', async(req, res) => {
   }
 })
 
-//Delete a task
+
 router.delete('/api/todo/:id', async(req, res) =>{
   try {
       const {id} = req.params;
